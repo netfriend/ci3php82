@@ -1,0 +1,12 @@
+{extends file="layouts/main.tpl"}
+
+{block name="title"}{$page_title|default:'404 Page Not Found'} — CI3 Smarty{/block}
+
+{block name="content"}
+	<section class="hero error-page">
+		<p class="error-code">{$status_code|default:404}</p>
+		<h1>{$heading|default:'404 Page Not Found'}</h1>
+		<p>{$message|default:'The page you requested was not found.'}</p>
+		<p><a class="btn" href="{$base_url}">Back to home</a></p>
+	</section>
+{/block}
